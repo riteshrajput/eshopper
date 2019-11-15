@@ -11,14 +11,16 @@ body {
     font-weight: 400px;
 }
 
+
+
 .search {
-  width: 40%;
+  width: 100%;
   position: relative;
   display: flex;
 }
 
 .searchTerm {
-  width: 40%;
+  width: 100%;
   border: 3px solid #00B4CC;
   border-right: none;
   padding: 5px;
@@ -48,10 +50,14 @@ body {
 .wrap{
   width: 30%;
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+
+
 
 ul li {
     list-style: none;
