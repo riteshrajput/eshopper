@@ -1092,7 +1092,11 @@
 							<h2>About Shopper</h2>
 							<form action="#" class="searchform">
 								<input type="text" placeholder="Your email address" />
-								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+								<button type="submit" class="btn btn-default" onclick="dataLayer.push({
+									'event':'VirtualPageView',
+								        'virtualPageURL':'/shop.html',
+								        'virtualPageTitle':'All Products'
+									});"><i class="fa fa-arrow-circle-o-right"></i></button>
 								<p>Get the most recent updates from <br />our site and be updated your self...</p>
 							</form>
 						</div>
@@ -1112,13 +1116,6 @@
 		</div>
 		
 	</footer><!--/Footer-->
-	<script type="text/javascript">
-  	 dataLayer.push({
-	      'event':'VirtualPageView',
-	      'virtualPageURL':'/shop.html',
-	      'virtualPageTitle':'All Products'
-		});
-	</script>
 	<script>
 	$(function () {
 	var elements = $('.row > div > div > ul > li');
