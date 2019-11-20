@@ -190,8 +190,40 @@
 	    	<div class="row">    		
 	    		<div class="col-sm-12">    			   			
 					<h2 class="title text-center">Contact <strong>Us</strong></h2>    			    				    				
-					<div id="gmap" class="contact-map">
-					</div>
+					<!-- <div id="gmap" class="contact-map"> -->
+				
+					<form name="myForm" action="/action_page.php" method="get"> 
+					First Name:<br> 
+					<input type="text" name="FirstName">
+					<br><br>
+					Last Name:<br> 
+					<input type="text" name="LastName">
+					<br><br>
+					Email id:<br> 
+					<input type="email" name="EmailID"> 
+					<br><br>
+					Phone Number:<br> 
+					<input type="tel" min="1" max="10" name="PhoneNumber"> 
+					<br><br>
+					Subject:<br> 
+					<input type="text" name="Subject"> 
+					<br><br>
+					Message:
+					<br>
+					<textarea rows="3" cols="40" name="Message" id="Message">
+					</textarea>
+					<br><br>
+					Age:
+					<select name="Age" id="Age"> 
+						    <option value="">18-22</option> 
+						    <option value="1">23-30</option> 
+						    <option value="2">>30</option> 
+					</select>
+					<br><br>
+					<input type="submit" value="Submit"> 
+					</form> 
+					
+					<!-- </div> -->
 				</div>			 		
 			</div>    	
     		<div class="row">  	
