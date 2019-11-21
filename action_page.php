@@ -2,7 +2,7 @@
 $firstname = $_POST['FirstName'];
 $lastname = $_POST['LastName'];
 $email = $_POST['EmailID'];
-$phonenumber = $POST['PhoneNumber'];
+$phonenumber = $_POST['PhoneNumber'];
 $message = $_POST['Message'];
 $age = $_POST['Age'];
 $formcontent="From: $firstname \n Message: $message";
