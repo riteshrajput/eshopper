@@ -3,24 +3,14 @@
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script>dataLayer = window.dataLayer || [];</script>
-		<!-- Google Tag Manager -->
+	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-N3MX5VM');</script>
+	})(window,document,'script','dataLayer','GTM-5TJVMXL');</script>
 	<!-- End Google Tag Manager -->
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-42809208-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-42809208-1');
-	</script>
-	</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -43,28 +33,11 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 
-	<script>
-		$(function () {
-		var elements = $('.mainmenu > ul > li > ul> li,.btn-group > ul > li,.contactinfo > ul > li');
-		for (var i = 0; i < elements.length; i++) {
-			$(elements[i]).click( function() {
-			var out = this.innerText;
-			console.log(out);
-			dataLayer.push({
-		'event': 'headerClick',
-		'eventCategoryHeader': 'Header',
-		'eventActionHeader': 'Click',
-		'eventLabelHeader': out
-		});
-		 });
-		}});	
-	</script>
-
 </head><!--/head-->
 
 <body>
 	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3MX5VM"
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TJVMXL"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 	<header id="header"><!--header-->
@@ -185,44 +158,89 @@
 		</div><!--/header-bottom-->
 	</header><!--/header-->
 	 
+	 
 	 <div id="contact-page" class="container">
     	<div class="bg">
 	    	<div class="row">    		
 	    		<div class="col-sm-12">    			   			
 					<h2 class="title text-center">Contact <strong>Us</strong></h2>    			    				    				
 					<!-- <div id="gmap" class="contact-map"> -->
+					
 				
-					<form name="ContactInfo" action="/action_page.php" method="POST"> 
+					<form id='Details' name="ContactInfo" action='/action_page.php' method="post"> 
 					First Name:<br> 
-					<input type="text" id="FirstName" name="FirstName">
+					<input type="text" id='FirstName' class="Formfield" name="FirstName">
 					<br><br>
 					Last Name:<br> 
-					<input type="text" id="LastName" name="LastName">
+					<input type="text" id="LastName" class="Formfielfd" name="LastName">
 					<br><br>
 					Email id:<br> 
-					<input type="email" id="EmailID" name="EmailID"> 
+					<input type="email" id="EmailID" class="Formfield" name="EmailID"> 
 					<br><br>
 					Phone Number:<br> 
-					<input type="tel" id="PhoneNumber" min="1" max="10" name="PhoneNumber"> 
+					<input type="text" id="PhoneNumber" class="Formfield" name="PhoneNumber"> 
 					<br><br>
 					Subject:<br> 
-					<input type="text" id="Subject" name="Subject"> 
+					<input type="text" id="Subject" class="Formfield" name="Subject"> 
 					<br><br>
 					Message:
 					<br>
-					<textarea rows="3" cols="40" name="Message" id="Message">
+					<textarea rows="3" cols="40" class="Formfield" name="Message" id="Message">
 					</textarea>
 					<br><br>
 					Age:
-					<select name="Age" id="Age"> 
-					            <option value="" selected disabled>Please select an option...</option>
+					<select name="Age" id="Age" class="Formfield"> 
+							<option value="" selected disabled>Please select an option...</option>
 						    <option value="18-22">18-22</option> 
 						    <option value="23-30">23-30</option> 
 						    <option value=">30">>30</option> 
 					</select>
 					<br><br>
-					<input type="submit" id="SubmitBtn" value="Submit"> 
+					<input type="submit" name="Submit" id='SubmitBtn' value="Submit"> 
 					</form> 
+					<h2>Modal Example</h2>
+
+					<!-- Trigger/Open The Modal -->
+					<button id="myBtn">Open Modal</button>
+
+					<!-- The Modal -->
+					<div id="myModal" class="modal">
+
+					  <!-- Modal content -->
+					  <div class="modal-content">
+					    <span class="close">&times;</span>
+					    <p>Some text in the Modal..</p>
+					  </div>
+
+					</div>
+					<script>
+					// Get the modal
+					var modal = document.getElementById("myModal");
+
+					// Get the button that opens the modal
+					var btn = document.getElementById("myBtn");
+
+					// Get the <span> element that closes the modal
+					var span = document.getElementsByClassName("close")[0];
+
+					// When the user clicks the button, open the modal 
+					btn.onclick = function() {
+					  modal.style.display = "block";
+					}
+
+					// When the user clicks on <span> (x), close the modal
+					span.onclick = function() {
+					  modal.style.display = "none";
+					}
+
+					// When the user clicks anywhere outside of the modal, close it
+					window.onclick = function(event) {
+					  if (event.target == modal) {
+					    modal.style.display = "none";
+					  }
+					}
+					</script>
+
 					
 					<!-- </div> -->
 				</div>			 		
@@ -442,24 +460,6 @@
 		</div>
 		
 	</footer><!--/Footer-->
-		<script>
-	$(function () {
-	var elements = $('.row > div > div > ul > li');
-	for (var i = 0; i < elements.length; i++) {
-		$(elements[i]).click( function() {
-		var out = this.innerText;
-		console.log(out);
-		dataLayer.push({
-	'event': 'footerClick',
-	'eventCategoryFooter': 'Footer',
-	'eventActionFooter': 'Click',
-	'eventLabelFooter': out
-	});
-	 });
-	}});	
-	</script>
-
-  
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>

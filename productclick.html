@@ -1,0 +1,26 @@
+<script>
+  var ProductId = $('#ProductInfo>p').text().split('A')[0].split(':')[1].trim();
+  var ProductName = $('#ProductInfo>h2').text();
+  var ProductPrice = $('#ProductInfo>span>span').text().split(' ')[1];
+
+  dataLayer.push({
+    'event': 'productClick',
+    'ecommerce': {
+      'click': {
+        'actionField': {'list': 'Products'},      // Optional list property.
+        'products': [{
+          'name': ProductName,                      // Name or ID is required.
+          'id': ProductId,
+          'price': ProductPrice,
+          'brand': 'E-SHOPPER',
+          'category': 'Apparel',
+          'variant': 'Black',
+          'position': 'Middle'
+         }]
+       }
+     },
+     'eventCallback': function() {
+       document.location = productObj.url
+     }
+  });
+</script>

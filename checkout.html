@@ -3,24 +3,14 @@
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script>dataLayer = window.dataLayer || [];</script>
-		<!-- Google Tag Manager -->
+	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-N3MX5VM');</script>
+	})(window,document,'script','dataLayer','GTM-5TJVMXL');</script>
 	<!-- End Google Tag Manager -->
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-42809208-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-42809208-1');
-	</script>
-	</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -43,28 +33,11 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 
-	<script>
-		$(function () {
-		var elements = $('.mainmenu > ul > li > ul> li,.btn-group > ul > li,.contactinfo > ul > li');
-		for (var i = 0; i < elements.length; i++) {
-			$(elements[i]).click( function() {
-			var out = this.innerText;
-			console.log(out);
-			dataLayer.push({
-		'event': 'headerClick',
-		'eventCategoryHeader': 'Header',
-		'eventActionHeader': 'Click',
-		'eventLabelHeader': out
-		});
-		 });
-		}});	
-	</script>
-
 </head><!--/head-->
 
 <body>
 	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3MX5VM"
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TJVMXL"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 	<header id="header"><!--header-->
@@ -229,7 +202,7 @@
 								<input type="password" placeholder="Confirm password">
 							</form>
 							<a class="btn btn-primary" href="">Get Quotes</a>
-							<a class="btn btn-primary" href="">Continue</a>
+							<a id="Purchase" class="btn btn-primary" href="">Continue</a>
 						</div>
 					</div>
 					<div class="col-sm-5 clearfix">
@@ -311,11 +284,11 @@
 								<a href=""><img src="images/cart/one.png" alt=""></a>
 							</td>
 							<td class="cart_description">
-								<h4><a href="">Colorblock Scuba</a></h4>
-								<p>Web ID: 1089772</p>
+								<h4><a href="">Blue Shirt</a></h4>
+								<p>Web ID: 123</p>
 							</td>
 							<td class="cart_price">
-								<p>$59</p>
+								<p>$10</p>
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
@@ -325,14 +298,14 @@
 								</div>
 							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
+								<p class="cart_total_price">$12</p>
 							</td>
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
 							</td>
 						</tr>
 
-						<tr>
+						<!-- <tr>
 							<td class="cart_product">
 								<a href=""><img src="images/cart/two.png" alt=""></a>
 							</td>
@@ -381,17 +354,17 @@
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
 							</td>
-						</tr>
+						</tr> -->
 						<tr>
 							<td colspan="4">&nbsp;</td>
 							<td colspan="2">
 								<table class="table table-condensed total-result">
 									<tr>
 										<td>Cart Sub Total</td>
-										<td>$59</td>
+										<td>$10</td>
 									</tr>
 									<tr>
-										<td>Exo Tax</td>
+										<td>Eco Tax</td>
 										<td>$2</td>
 									</tr>
 									<tr class="shipping-cost">
@@ -400,7 +373,7 @@
 									</tr>
 									<tr>
 										<td>Total</td>
-										<td><span>$61</span></td>
+										<td><span>$12</span></td>
 									</tr>
 								</table>
 							</td>
@@ -408,17 +381,41 @@
 					</tbody>
 				</table>
 			</div>
+							<!-- <input type="checkbox" name="payment-options" value="Direct Bank Transfer" id="payment-options">-->	
+		<!-- 	<form> 
+				<input type="checkbox" name="mycheckbox" id="mycheckbox">
+				<label> Direct Bank Transfer</label> 
+				<input type="checkbox" name="mycheckbox" id="mycheckbox">
+				<label> Check Payment</label> 
+				<input type="checkbox" name="mycheckbox" id="mycheckbox">
+				<label> Paypal</label> 
+			</form> -->
+
+			<!--<form> 
+				<input type="checkbox" id="payment-options" value="Direct Bank Transfer">
+				<label for="Direct Bank Transfer"> Direct Bank Transfer</label><br>
+				<input type="checkbox" id="payment-options" value="Check Payment">
+				<label for="Check Payment"> Check Payment</label><br>
+				<input type="checkbox" id="payment-options" value="Paypal">
+				<label for="Paypal"> Paypal</label>  
+			</form> -->
 			<div class="payment-options">
-					<span>
-						<label><input type="checkbox"> Direct Bank Transfer</label>
+				<input type="radio" id="radioID" value="Direct transfer" name="payments">
+				<label>Direct transfer</label>
+				<input type="radio" id="radioID" value="Check Payment" name="payments">
+				<label>Check Payment</label>
+				<input type="radio" id="radioID" value="Paypal" name="payments">
+				<label>Paypal</label>
+					<!-- <span>
+						<label><input type="radio"> Direct Bank Transfer</label>
 					</span>
 					<span>
-						<label><input type="checkbox"> Check Payment</label>
+						<label><input type="radio"> Check Payment</label>
 					</span>
 					<span>
-						<label><input type="checkbox"> Paypal</label>
-					</span>
-				</div>
+						<label><input type="radio"> Paypal</label>
+					</span> -->
+			</div>
 		</div>
 	</section> <!--/#cart_items-->
 
@@ -578,27 +575,65 @@
 					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
 				</div>
 			</div>
-		</div>
-		
+		</div>	
 	</footer><!--/Footer-->
-		<script>
-	$(function () {
-	var elements = $('.row > div > div > ul > li');
-	for (var i = 0; i < elements.length; i++) {
-		$(elements[i]).click( function() {
-		var out = this.innerText;
-		console.log(out);
-		dataLayer.push({
-	'event': 'footerClick',
-	'eventCategoryFooter': 'Footer',
-	'eventActionFooter': 'Click',
-	'eventLabelFooter': out
-	});
-	 });
-	}});	
+	<script>
+	$('.btn.btn-primary').click(function() {
+	dataLayer.push({
+	  'event': 'Purchase',
+	  'ecommerce': {
+	    'purchase': {
+	      'actionField': {
+	        'id': '123',                        
+	        'affiliation': 'Online Store',
+	        'revenue': '12',                     	
+	        'tax':'2',
+	        'shipping': '0',
+	        'coupon': ''
+	      },
+	      'products': [{                            
+	        'name': 'Blue Shirt',     
+	        'id': '123',
+	        'price': '10',
+	        'brand': 'E-SHOPPER',
+	        'category': 'Apparel',
+	        'variant': 'Blue',
+	        'quantity': 1,
+	        'coupon': ''                           
+	       }]
+	    }
+	  }
+	});});
 	</script>
-
-
+	<script>
+	$('.payment-options').click(function(){
+	payment_option = $('input[name="payments"]:checked').val();
+	dataLayer.push({
+		    'event': 'checkoutoption',
+		    'ecommerce': {
+		      'checkout': {
+		        'actionField': {'step': 2, 'option': payment_option},
+		        'products': [{
+		          'name': 'Blue Shirt',
+		          'id': '123',
+		          'price': '10',
+		          'brand': 'E-SHOPPER',
+		          'category': 'Apparel',
+		          'variant': 'Blue',
+		          'quantity': 1
+		       }]
+		     }
+		   }});
+	// dataLayer.push({
+ //    		'event': 'checkoutOption',
+ //    		'ecommerce': {
+ //      			'checkout_option': {
+ //        		'actionField': {'step': 2, 'option': payment_option}
+ //      		}
+ //    		}
+ //  		});
+	});			
+	</script>
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.scrollUp.min.js"></script>
